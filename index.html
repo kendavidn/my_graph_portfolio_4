@@ -84,4 +84,238 @@
     section h2 {
       font-size: 1.75rem;
       margin-bottom: 1rem;
-      color: var(--dark-teal)
+      color: var(--dark-teal);
+    }
+
+    /* About Me */
+    .about-me .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .about-me ul {
+      list-style: none;
+    }
+
+    .about-me li::before {
+      content: "• ";
+      color: var(--light-teal);
+      font-weight: bold;
+    }
+
+    /* About Course */
+    .details {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .course-module {
+      background: var(--white);
+      border-left: 8px solid var(--light-teal);
+      border-radius: 4px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Submissions */
+    .submissions ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .submissions li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.875rem;
+      background: var(--white);
+      color: var(--dark-teal);
+    }
+
+    @media (max-width: 600px) {
+      .about-me .details {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kene David Nwosu</h1>
+    <p>R Developer • Data Analyst • Educator</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about-me">About&nbsp;Me</a></li>
+      <li><a href="#about-course">About&nbsp;the&nbsp;Course</a></li>
+      <li><a href="#submissions">Weekly&nbsp;Submissions</a></li>
+    </ul>
+  </nav>
+
+  <section id="about-me" class="about-me">
+    <h2>About Me</h2>
+    <p>
+      I'm a PhD candidate in epidemiology at the University of Geneva, specialising
+      in infectious‑disease modelling and data‑driven insight. My work bridges
+      health research, education and open‑source development.
+    </p>
+
+    <div class="details">
+      <div>
+        <h3>Skills</h3>
+        <ul>
+          <li>R (expert)</li>
+          <li>Python (proficient)</li>
+          <li>JavaScript (proficient)</li>
+          <li>Data visualisation &amp; reporting</li>
+          <li>Web application development</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Projects</h3>
+        <ul>
+          <li>
+            <a href="https://thegraphcourses.org" target="_blank" rel="noopener"
+              >The GRAPH Courses</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://kendavidn.shinyapps.io/gocontactr"
+              target="_blank"
+              rel="noopener"
+              >GoContactR – contact‑tracing dashboard</a
+            >
+          </li>
+          <li>
+            <a href="https://demolandscapes.info" target="_blank" rel="noopener"
+              >DemoLandscapes</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-course">
+    <h2>About the Course</h2>
+    <p>
+      <strong>Generative AI for Work &amp; Research Productivity</strong> is an
+      eight‑week, live‑online certification that equips participants with
+      no‑code AI tools to automate everyday academic and professional
+      workflows.
+    </p>
+
+    <ul>
+      <li>Automate document, spreadsheet and data tasks</li>
+      <li>Organise knowledge and streamline literature reviews</li>
+      <li>Build custom chatbots for projects or teams</li>
+      <li>Create professional visuals and presentations with AI</li>
+      <li>Showcase your learning in a hands‑on capstone project</li>
+    </ul>
+
+    <h3 style="margin-top: 2rem">Key Details</h3>
+    <div
+      class="details"
+      style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))"
+    >
+      <div><strong>Format:</strong> Live &amp; online</div>
+      <div><strong>Duration:</strong> 8 weeks</div>
+      <div><strong>Learning Style:</strong> Interactive workshops &amp; help sessions</div>
+    </div>
+
+    <h3 style="margin-top: 2rem">Modules</h3>
+    <div class="course-module">
+      <strong>Documents, Presentations &amp; Websites</strong><br /><em
+        >LLMs, content generation, no‑code websites, AI presentations</em
+      >
+    </div>
+    <div class="course-module">
+      <strong>Automated Data Analysis</strong><br /><em
+        >ChatGPT Code Interpreter, Julius, Windsurf, data visualisation</em
+      >
+    </div>
+    <div class="course-module">
+      <strong>GenAI for Research &amp; Text Analysis</strong><br /><em
+        >Elicit, Literev, summarisation, classification</em
+      >
+    </div>
+    <div class="course-module">
+      <strong>Custom GPTs and Chatbots</strong><br /><em
+        >RAG systems, Botpress, API integration</em
+      >
+    </div>
+    <div class="course-module">
+      <strong>AI Workflows for Task Automation</strong><br /><em
+        >Lindy, Make.com, task orchestration</em
+      >
+    </div>
+    <div class="course-module">
+      <strong>GenAI for Communication &amp; Outreach</strong><br /><em
+        >Ideogram, InVideo AI, marketing flows</em
+      >
+    </div>
+    <div class="course-module">
+      <strong>Capstone Project &amp; Showcase</strong><br /><em
+        >Solution design, integration, presentation</em
+      >
+    </div>
+  </section>
+
+  <section id="submissions" class="submissions">
+    <h2>Weekly Submissions</h2>
+    <p>
+      Links to my weekly assignments will appear here as the course progresses.
+    </p>
+    <ul>
+      <li>Week&nbsp;1 – <a href="#">Coming soon</a></li>
+      <li>Week&nbsp;2 – <a href="#">Coming soon</a></li>
+      <li>Week&nbsp;3 – <a href="#">Coming soon</a></li>
+      <li>Week&nbsp;4 – <a href="#">Coming soon</a></li>
+      <li>Week&nbsp;5 – <a href="#">Coming soon</a></li>
+      <li>Week&nbsp;6 – <a href="#">Coming soon</a></li>
+      <li>Week&nbsp;7 – <a href="#">Coming soon</a></li>
+      <li>Week&nbsp;8 – <a href="#">Coming soon</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Kene David Nwosu • Built with vanilla HTML &amp;
+    CSS
+  </footer>
+
+  <script>
+    // Insert current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Smooth scrolling for browsers without CSS scroll-behaviour support
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const target = document.querySelector(link.getAttribute("href"));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 60,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
